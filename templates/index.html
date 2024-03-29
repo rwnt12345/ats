@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link
+    href="static/https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet">
+
+  <title>CV checking</title>
+
+  <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.css">
+
+  <link rel="stylesheet" href="static/assets/css/style.css">
+  <script src="static/assets/js/jquery-2.1.0.min.js"></script>
+<script src="static/assets/js/popper.js"></script>
+<script src="static/assets/js/bootstrap.min.js"></script>
+<script src="static/assets/js/scrollreveal.min.js"></script>
+<script src="static/assets/js/waypoints.min.js"></script>
+<script src="static/assets/js/jquery.counterup.min.js"></script>
+<script src="static/assets/js/imgfix.min.js"></script>
+<script src="static/assets/js/mixitup.js"></script>
+<script src="static/assets/js/accordions.js"></script>
+<script src="static/assets/js/custom.js"></script>
+<script src="static/scanner.js"></script>
+<script src="static/scrollToSection.js"></script>
+<script src="static/app.js"></script>
+<script src="static/dropdown.js"></script>
+<script src="static/genai.js"></script>
+
+
+</head>
+
+<body>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="static/index.html" class="logo">Career Nest</em></a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="static/index.html">Home</a></li>
+              <li><a href="static/contact.html">Contact</a></li>
+              </ul>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>  
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top">
+    <video autoplay muted loop id="bg-video">
+      <source src="static/assets/images/video.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay header-text">
+      <div class="caption">
+          <h6>Unlock more interview opportunities by optimizing your resume with Career Nest</h6>
+          <h2>Find your dream <em>Career</em></h2>
+          <button class="scroll-button" onclick="scrollToScannerSection()">Scan the resume</button>
+      </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+
+<!-- ***** Our Classes Start ***** -->
+<section class="section" id="our-classes">
+    <div class="containeer">
+        <br>
+        <br>
+        <br>
+        <div class="row" id="tabs">
+          <div class="col-lg-4">
+            <ul>
+              <li><a href='static/#tabs-1'><i class="fa fa-soccer-ball-o"></i> Our Goals</a></li>
+              <li><a href='static/#tabs-2'><i class="fa fa-briefcase"></i> Our Work</a></a></li>
+              <li><a href='static/#tabs-3'><i class="fa fa-heart"></i> Our Passion</a></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <img src="static/assets/images/1.jpg" alt="">
+                <h4>Our Goals</h4>
+
+                <p>A job recommendation website streamlines job search by offering personalized, relevant job opportunities.</p>
+
+                <p>It uses algorithms to match job seekers with employment options based on their qualifications, preferences, and career objectives.</p>
+
+                <p>  The website aims to deliver accurate job listings, ensure diversity across industries, and enhance user engagement through intuitive navigation and interactive features.</p>
+               
+                <p> It saves time and effort for job seekers, maximizing the likelihood of finding suitable employment options. It also prioritizes long-term career development by providing resources and networking opportunities. Monetization strategies like job postings and premium memberships sustain the website's operations.</p>
+              </article>
+              <article id='tabs-2'>
+                <img src="static/assets/images/2.jpg" alt="">
+                <h4>Our Work</h4>
+                <p>Career Nest is a platform that uses advanced algorithms and data analytics to transform the job search process. It provides personalized job suggestions that match each user's skills, preferences, and career aspirations.</p>
+                <p>The platform empowers job seekers of all backgrounds and experience levels to navigate the job market confidently, offering tools for resume building, interview preparation, networking, and career development. </p>
+                <p>Career Nest is committed to accuracy and relevance, continuously refining its recommendation engine to ensure the delivery of the most suitable opportunities</p>
+              </article>
+              <article id='tabs-3'>
+                <img src="static/assets/images/3.jpg" alt="">
+                <h4>Our Passion</h4>
+                <p>Our career guidance platform is dedicated to assisting individuals in discovering their ideal career paths.</p>
+
+                <p>Through a thoughtfully curated selection of images, we illustrate career achievements, personal growth, and networking opportunities. Our commitment to inclusivity ensures equal access to a diverse array of job opportunities spanning various industries. </p>
+
+                <p>Embracing innovation and technology, our platform showcases cutting-edge tools and futuristic landscapes. With a mission to inspire and connect with users on their career journeys, our platform endeavors to empower individuals to pursue fulfilling and rewarding professional paths.</p>
+              </article>
+            </section>
+          </div>
+        </div>
+    </div>
+</section>
+
+<!-- *****box ***** -->
+<!-- *****box ***** -->
+<section class="section" id="scanner-section">
+            <!-- Description Part -->
+            <br>
+            <h3>Description</h3>
+            <br>
+            <label>
+                <input type="radio" name="des" id="givenDescription">Given Description<br>
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="des" id="yourDescription">Give Your Description<br>
+            </label>
+            
+            <textarea id="descriptionTextarea" style="display: none;"></textarea>
+            
+            <script>
+                // Get the radio buttons and textarea element
+                const givenDescriptionRadio = document.getElementById('givenDescription');
+                const yourDescriptionRadio = document.getElementById('yourDescription');
+                const descriptionTextarea = document.getElementById('descriptionTextarea');
+            
+                // Add event listener to radio buttons
+                givenDescriptionRadio.addEventListener('change', function() {
+                    descriptionTextarea.style.display = 'none';
+                    descriptionTextarea.value = ''; // Clear any existing value
+                });
+            
+                yourDescriptionRadio.addEventListener('change', function() {
+                    descriptionTextarea.style.display = 'block';
+                });
+            </script>
+            <form id="symptomForm" method="POST" action="/">
+  <div class="container">
+      <div class="scanner-container">
+          <div class="resume-scanner">
+              <h2>Upload Your Resume</h2>
+              <!-- File Input for Resume Data -->
+              <br>
+              <input type="file" name="file" id="resume-file" accept=".pdf, .doc, .docx"><br>
+              <!-- Textarea for Resume Data (Optional) --><br>
+              <textarea id="resume-text" name="text" rows="4" cols="50" placeholder="Or paste your resume here..."></textarea>
+              <button type="button" onclick="sendToGenAI()">Send Resume Data</button>
+              <!-- Display area for extracted text -->
+              <div id="extracted-text"></div>
+          </div>
+          <div class="skill-selection">
+              <h2>Select Skills</h2>
+              <div class="dropdown">
+                  <button onclick="toggleDropdown()" class="dropbtn">Select Skills</button>
+                  <div id="skills-dropdown" class="dropdown-content">
+                      <a href="static/#" onclick="selectSkill(event, 'Android Development')">Android Development</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Full Stack Development')">Full Stack Development</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Web Design')">Web Design</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Data Analysis')">Data Analysis</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Project Management')">Project Management</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Customer Service')">Customer Service</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Marketing')">Marketing</a>
+                      <a href="static/#" onclick="selectSkill(event, 'Content Writing')">Content Writing</a>
+                      <!-- Add more skills here -->
+                  </div>
+              </div>
+              <!-- Display area for selected skill beside the button -->
+              <div id="selected-skill-container"></div>
+          </div>
+        </div>
+          </div>
+</section>
+
+</form>
+<!-- ***** box Ends ***** -->
+
+<!-- *****REASONING ***** -->
+<section class="section" id="reason">
+    <div class="container">
+      <div class="row">
+        <div class="content">
+          <h2>why use Resume Check?</h2>
+          <br>
+          <p>Resume checking is a crucial step in the recruitment process, enabling recruiters to efficiently identify qualified candidates, reduce bias, and focus on
+            relevant candidates. Automated systems filter resumes based on keywords, skills, experience, and qualifications, reducing
+            human error and bias. They also maintain objectivity by applying predefined criteria uniformly to all applicants, ensuring fair
+            consideration. This time-saving tool allows recruiters to prioritize their review process and engage with promising candidates. Additionally,
+            it enhances the candidate experience by providing quicker feedback and ensuring
+            compliance with legal and organizational policies.</p>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- ***** REASONING Ends ***** -->
+
+<!-- ***** Call to Action Start ***** -->
+<section class="section section-bg" id="call-to-action"
+    style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="cta-content">
+            <h2>Send us a <em>message</em></h2>
+            <p>
+              "Innovation. Excellence. Your satisfaction, our priority. Explore our range of products/services and let's build a brighter future together.
+               © Team Nine 2024. All rights reserved."</p>
+            <div class="main-button">
+              <a href="static/contact.html">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- ***** Call to Action End ***** -->
+
+<!-- ***** Footer Start ***** -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>
+          Copyright © 2024 Team Nine <br>
+          <a href="static/mailto:teamNine@gmail.ccom">teamnine@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<script src="static/assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="static/assets/js/popper.js"></script>
+<script src="static/assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="static/assets/js/scrollreveal.min.js"></script>
+<script src="static/assets/js/waypoints.min.js"></script>
+<script src="static/assets/js/jquery.counterup.min.js"></script>
+<script src="static/assets/js/imgfix.min.js"></script>
+<script src="static/assets/js/mixitup.js"></script>
+<script src="static/assets/js/accordions.js"></script>
+
+<!-- Global Init -->
+<script src="static/assets/js/custom.js"></script>
+<script src="static/scanner.js"></script>
+<script src="static/scrollToSection.js"></script>
+<script src="static/app.js"></script>
+<script src="static/dropdown.js"></script>
+<script src="static/genai.js"></script>
+
+ <!-- ***** Include iframe for table.html ***** -->
+ <iframe src="static/table.html" width="100%" height="600px"></iframe>
+
+</body>
+
+</html>
